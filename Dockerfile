@@ -14,6 +14,10 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8081
+#note: the expose command does nothing, it's a documented suggestion from the
+# developer of the image to the person running the container instance.
+# run time parameter to docker: --publish 30001:8001 or -p 30001:8001
+# where 8001 is the listening port in the container
+EXPOSE 30001
 
 CMD ["npm", "start"]

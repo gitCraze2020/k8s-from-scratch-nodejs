@@ -11,7 +11,7 @@ spec:
        # port to forward inside the pod
        targetPort: 8001
        # port accessible outside cluster
-       nodePort: 30002
+       nodePort: 30001
   selector:
     app: myapp
   type: LoadBalancer
