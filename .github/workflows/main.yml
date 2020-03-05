@@ -14,6 +14,8 @@ jobs:
       uses: actions/checkout@master
 
     - name: Update SHA
+      run: echo GITHUB_SHA=$GITHUB_SHA
+      run: echo GITHUB_WORKSPACE=$GITHUB_WORKSPACE
       run: echo $GITHUB_SHA > $GITHUB_WORKSPACE/site/_meta
 
     - name: Build container image
