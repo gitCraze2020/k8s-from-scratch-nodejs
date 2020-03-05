@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Checkout master
-      uses: actions/checkout@master
-
+#    - name: Checkout master
+#      uses: actions/checkout@master
+     - name: Actions Checkout at v1
+       uses: actions/checkout@v1
+ 
     - name: Display env vars SHA
       run: echo GITHUB_SHA=$GITHUB_SHA ; echo GITHUB_WORKSPACE=$GITHUB_WORKSPACE
 
