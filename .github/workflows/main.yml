@@ -19,6 +19,9 @@ jobs:
     - name: Display env vars SHA
       run: echo GITHUB_SHA=$GITHUB_SHA ; echo GITHUB_WORKSPACE=$GITHUB_WORKSPACE
 
+    - name: Create folder
+      run: mkdir $GITHUB_WORKSPACE/site
+
     - name: Update SHA
       run: echo $GITHUB_SHA > $GITHUB_WORKSPACE/site/_meta
 
