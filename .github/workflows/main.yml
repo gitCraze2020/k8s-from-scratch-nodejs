@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Checkout
-      uses: actions/checkout@v2
-
     - name: Checkout master
       uses: actions/checkout@master
 
@@ -27,6 +24,9 @@ jobs:
 
     - name: Build container image
       run: docker build -t dockercraze/k8s-from-scratch-nodejs:$(echo $GITHUB_SHA | head -c7) .
+
+    - name: Print Docker Login
+      run: echo DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
 
     - name: Docker Login
       env:
