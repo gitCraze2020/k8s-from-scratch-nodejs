@@ -1,7 +1,7 @@
 {
   "name": "docker_web_app_for_k8s",
   "version": "1.0.0",
-  "description": "Node.js on Docker then K8s",
+  "description": "Node.js on Docker then K8s through Jenkins",
   "author": "Stoop Jurgen<jurgenstoop@yahoo.com>",
   "main": "server.js",
   "scripts": {
